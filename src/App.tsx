@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom"; // 👈 utiliser HashRouter
 import { Dashboard } from "./components/Dashboard";
 import { Marketplace } from "./components/Marketplace";
 import { Weather } from "./components/Weather";
@@ -18,7 +18,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      {/* 👇 remplacer BrowserRouter par HashRouter */}
+      <HashRouter>
         <div className="min-h-screen bg-background">
           <Routes>
             <Route path="/" element={<Dashboard />} />
@@ -26,12 +27,12 @@ const App = () => (
             <Route path="/weather" element={<Weather />} />
             <Route path="/messages" element={<Messages />} />
             <Route path="/payments" element={<Payments />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            {/* Catch-all pour éviter les crash */}
             <Route path="*" element={<NotFound />} />
           </Routes>
           <BottomNavigation />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
