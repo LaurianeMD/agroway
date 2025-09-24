@@ -4,15 +4,15 @@ import { Badge } from '@/components/ui/badge';
 
 export function Weather() {
   const currentWeather = {
-    location: 'Nairobi, Kenya',
-    temperature: 26,
-    condition: 'Partly Cloudy',
-    humidity: 68,
-    windSpeed: 12,
-    visibility: 10,
-    pressure: 1013,
-    uvIndex: 6,
-    feelsLike: 28
+    location: 'Dakar, Sénégal',
+    temperature: 28,
+    condition: 'Partiellement Nuageux',
+    humidity: 75,
+    windSpeed: 15,
+    visibility: 12,
+    pressure: 1015,
+    uvIndex: 8,
+    feelsLike: 31
   };
 
   const hourlyForecast = [
@@ -32,9 +32,9 @@ export function Weather() {
   ];
 
   const farmingAlerts = [
-    { type: 'warning', message: 'Light rain expected this afternoon - good for irrigation', priority: 'medium' },
-    { type: 'info', message: 'Optimal conditions for planting next week', priority: 'low' },
-    { type: 'success', message: 'Perfect humidity levels for crop growth', priority: 'high' },
+    { type: 'warning', message: 'Pluie légère attendue cet après-midi - bon pour l\'irrigation', priority: 'moyen' },
+    { type: 'info', message: 'Conditions optimales pour planter la semaine prochaine', priority: 'faible' },
+    { type: 'success', message: 'Niveaux d\'humidité parfaits pour la croissance des cultures', priority: 'élevé' },
   ];
 
   const getAlertColor = (type: string) => {
@@ -49,8 +49,8 @@ export function Weather() {
     <div className="pb-20 px-4 pt-6">
       {/* Header */}
       <div className="mb-6">
-        <h1 className="text-2xl font-bold text-foreground mb-1">Weather & Climate</h1>
-        <p className="text-muted-foreground text-sm">Track conditions for better farming decisions</p>
+        <h1 className="text-2xl font-bold text-foreground mb-1">Météo & Climat</h1>
+        <p className="text-muted-foreground text-sm">Suivez les conditions pour de meilleures décisions agricoles</p>
       </div>
 
       {/* Current Weather */}
@@ -67,12 +67,12 @@ export function Weather() {
           
           <div className="grid grid-cols-2 gap-4">
             <div className="text-center">
-              <p className="text-2xl font-semibold">{currentWeather.feelsLike}°C</p>
-              <p className="text-sm opacity-75">Feels like</p>
+            <p className="text-2xl font-semibold">{currentWeather.feelsLike}°C</p>
+            <p className="text-sm opacity-75">Ressenti</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl font-semibold">{currentWeather.humidity}%</p>
-              <p className="text-sm opacity-75">Humidity</p>
+            <p className="text-2xl font-semibold">{currentWeather.humidity}%</p>
+            <p className="text-sm opacity-75">Humidité</p>
             </div>
           </div>
         </CardContent>
@@ -81,7 +81,7 @@ export function Weather() {
       {/* Farming Alerts */}
       <Card className="mb-6 shadow-soft">
         <CardHeader>
-          <CardTitle className="text-base">Farming Alerts</CardTitle>
+          <CardTitle className="text-base">Alertes Agricoles</CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
           {farmingAlerts.map((alert, index) => (

@@ -13,43 +13,43 @@ export function Messages() {
   const conversations = [
     {
       id: 1,
-      name: 'Sarah Achieng',
-      type: 'Buyer',
-      lastMessage: 'Is the lettuce still available?',
-      time: '2m ago',
+      name: 'Aminata Diallo',
+      type: 'Acheteur',
+      lastMessage: 'Les oignons sont-ils encore disponibles?',
+      time: 'il y a 2min',
       unread: 2,
       online: true,
-      avatar: 'SA'
+      avatar: 'AD'
     },
     {
       id: 2,
-      name: 'James Mwangi',
-      type: 'Farmer',
-      lastMessage: 'New corn harvest ready for pickup',
-      time: '1h ago',
+      name: 'Ousmane Ba',
+      type: 'Agriculteur',
+      lastMessage: 'Nouvelle récolte de mil prête pour livraison',
+      time: 'il y a 1h',
       unread: 0,
       online: true,
-      avatar: 'JM'
+      avatar: 'OB'
     },
     {
       id: 3,
-      name: 'Mary Wanjiku',
-      type: 'Buyer',
-      lastMessage: 'Thank you for the fresh tomatoes!',
-      time: '3h ago',
+      name: 'Fatou Seck',
+      type: 'Acheteur',
+      lastMessage: 'Merci pour les tomates fraîches!',
+      time: 'il y a 3h',
       unread: 0,
       online: false,
-      avatar: 'MW'
+      avatar: 'FS'
     },
     {
       id: 4,
-      name: 'Peter Ochieng',
-      type: 'Supplier',
-      lastMessage: 'Seeds will arrive tomorrow morning',
-      time: '1d ago',
+      name: 'Modou Fall',
+      type: 'Fournisseur',
+      lastMessage: 'Les graines arriveront demain matin',
+      time: 'il y a 1j',
       unread: 1,
       online: false,
-      avatar: 'PO'
+      avatar: 'MF'
     }
   ];
 
@@ -112,15 +112,15 @@ export function Messages() {
         // Chat List View
         <div className="px-4 flex-1">
           <div className="mb-6">
-            <h1 className="text-2xl font-bold text-foreground mb-1">Messages</h1>
-            <p className="text-muted-foreground text-sm">Connect with farmers and buyers</p>
+        <h1 className="text-2xl font-bold text-foreground mb-1">Messages</h1>
+        <p className="text-muted-foreground text-sm">Connectez-vous avec les agriculteurs et acheteurs</p>
           </div>
 
           {/* Search */}
           <div className="relative mb-6">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input 
-              placeholder="Search conversations..." 
+              placeholder="Rechercher conversations..." 
               className="pl-10 h-12 border-border/50 focus:border-primary transition-smooth"
             />
           </div>

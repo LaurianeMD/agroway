@@ -6,41 +6,41 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
 export function Payments() {
   const paymentMethods = [
-    { id: 1, name: 'M-Pesa', type: 'mobile', number: '***-***-2847', active: true, logo: '💰' },
-    { id: 2, name: 'Orange Money', type: 'mobile', number: '***-***-9156', active: true, logo: '🟠' },
-    { id: 3, name: 'Wave', type: 'mobile', number: '***-***-3742', active: false, logo: '🌊' },
+    { id: 1, name: 'Orange Money', type: 'mobile', number: '***-***-2847', active: true, logo: '🟠' },
+    { id: 2, name: 'Wave', type: 'mobile', number: '***-***-9156', active: true, logo: '🌊' },
+    { id: 3, name: 'Free Money', type: 'mobile', number: '***-***-3742', active: false, logo: '📱' },
   ];
 
   const recentTransactions = [
     {
       id: 1,
       type: 'received',
-      amount: 'KSh 9,600',
-      from: 'Sarah Achieng',
-      description: 'Payment for 120kg Fresh Lettuce',
-      date: '2 hours ago',
-      status: 'completed',
-      method: 'M-Pesa'
-    },
-    {
-      id: 2,
-      type: 'sent',
-      amount: 'KSh 4,500',
-      to: 'James Mwangi',
-      description: 'Payment for 100kg Corn Seeds',
-      date: '1 day ago',
+      amount: '42.000 CFA',
+      from: 'Aminata Diallo',
+      description: 'Paiement pour 120kg Oignons Frais',
+      date: 'il y a 2 heures',
       status: 'completed',
       method: 'Orange Money'
     },
     {
+      id: 2,
+      type: 'sent',
+      amount: '28.000 CFA',
+      to: 'Ousmane Ba',
+      description: 'Paiement pour 100kg Graines de Mil',
+      date: 'il y a 1 jour',
+      status: 'completed',
+      method: 'Wave'
+    },
+    {
       id: 3,
       type: 'received',
-      amount: 'KSh 12,800',
-      from: 'Mary Wanjiku',
-      description: 'Payment for 160kg Premium Tomatoes',
-      date: '3 days ago',
+      amount: '80.000 CFA',
+      from: 'Fatou Seck',
+      description: 'Paiement pour 160kg Tomates Premium',
+      date: 'il y a 3 jours',
       status: 'pending',
-      method: 'M-Pesa'
+      method: 'Orange Money'
     }
   ];
 
@@ -75,8 +75,8 @@ export function Payments() {
   ];
 
   const stats = {
-    totalEarnings: 'KSh 156,400',
-    thisMonth: 'KSh 43,200',
+    totalEarnings: '975.000 CFA',
+    thisMonth: '270.000 CFA',
     averageRating: 4.8,
     totalTransactions: 47
   };
@@ -103,8 +103,8 @@ export function Payments() {
     <div className="pb-20 px-4 pt-6">
       {/* Header */}
       <div className="mb-6">
-        <h1 className="text-2xl font-bold text-foreground mb-1">Payments & Ratings</h1>
-        <p className="text-muted-foreground text-sm">Manage transactions and view feedback</p>
+        <h1 className="text-2xl font-bold text-foreground mb-1">Paiements & Évaluations</h1>
+        <p className="text-muted-foreground text-sm">Gérez les transactions et consultez les commentaires</p>
       </div>
 
       {/* Stats Overview */}
@@ -113,14 +113,14 @@ export function Payments() {
           <CardContent className="p-4 text-center">
             <TrendingUp className="h-6 w-6 mx-auto mb-2 text-success" />
             <p className="text-lg font-bold text-foreground">{stats.totalEarnings}</p>
-            <p className="text-xs text-muted-foreground">Total Earnings</p>
+            <p className="text-xs text-muted-foreground">Revenus Totaux</p>
           </CardContent>
         </Card>
         <Card className="shadow-soft">
           <CardContent className="p-4 text-center">
             <CreditCard className="h-6 w-6 mx-auto mb-2 text-primary" />
             <p className="text-lg font-bold text-foreground">{stats.thisMonth}</p>
-            <p className="text-xs text-muted-foreground">This Month</p>
+            <p className="text-xs text-muted-foreground">Ce Mois</p>
           </CardContent>
         </Card>
         <Card className="shadow-soft">

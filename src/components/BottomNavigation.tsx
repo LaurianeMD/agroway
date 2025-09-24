@@ -3,11 +3,11 @@ import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
 const navItems = [
-  { id: 'dashboard', label: 'Home', icon: Home, path: '/' },
-  { id: 'marketplace', label: 'Market', icon: ShoppingCart, path: '/marketplace' },
-  { id: 'weather', label: 'Weather', icon: Cloud, path: '/weather' },
+  { id: 'dashboard', label: 'Accueil', icon: Home, path: '/' },
+  { id: 'marketplace', label: 'Marché', icon: ShoppingCart, path: '/marketplace' },
+  { id: 'weather', label: 'Météo', icon: Cloud, path: '/weather' },
   { id: 'messages', label: 'Messages', icon: MessageCircle, path: '/messages' },
-  { id: 'payments', label: 'Payments', icon: CreditCard, path: '/payments' },
+  { id: 'payments', label: 'Paiements', icon: CreditCard, path: '/payments' },
 ];
 
 export function BottomNavigation() {
